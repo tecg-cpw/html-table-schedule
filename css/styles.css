@@ -1,0 +1,27 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans&subset=latin-ext);
+
+body {
+    font: 16px/1.5 'Open Sans';
+}
+table {
+    caption-side: bottom;
+}
+th, td {
+    border: 1px solid rgb( 153, 153, 153 );
+    background-color: #f9f9f9;
+    width: 17em;
+    text-align: center;
+}
+th {
+    background-color: #cfcfcf;
+    height: 5em;
+}
+.vide {
+    background-color: transparent;
+    border: none;
+}
+caption {
+    font-style: italic;
+    text-align: right;
+    margin-top: 2em;
+}
