@@ -1,25 +1,126 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans&subset=latin-ext);
+@import url('https://fonts.googleapis.com/css?family=Recursive:400,700');
+
+/*
+    les ids pour les plages horaires vont de l0830 à l1630.
+    Par exemple, la plage horaire 8h30-09h30 est identifiée par l0830
+
+    les jours sont identifiés par les ids monday, tuesday, wednesday, thursday, friday
+
+    les cellules qui ne sont pas destinées à être lues par un lecteur d'écran ont l'attribut aria-hidden="true"
+
+    les contenus des cellules sont des listes de descriptions
+ */
+
+html {
+    line-height: 1.2;
+    -webkit-text-size-adjust: 100%;
+}
 
 body {
-    font: 16px/1.5 'Open Sans';
+    font-family: "Recursive", sans-serif;
+    max-width: 80rem;
+    margin: 2% auto 0;
 }
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+h1:before, h1:after {
+    content: " 🎓 "
+}
+
+#table-description, dt {
+    /*hide element visually*/
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    font-size: 0;
+    padding: 0;
+}
+
+[aria-hidden] {
+    border: none;
+    background: none;
+}
+
 table {
     caption-side: bottom;
+    width: 100%;
 }
-th, td {
-    border: 1px solid rgb( 153, 153, 153 );
+
+th {
+    background-color: #d7d7d7;
+    padding: 1em;
+    min-width: 10rem;
+    text-align: right;
+}
+
+td {
+    border: 1px solid #d7d7d7;
     background-color: #f9f9f9;
-    width: 17em;
+    padding: .25em;
+    text-align: left;
+    vertical-align: top;
+}
+
+tbody tr{
+    height: 7rem;
+}
+tbody tr:has( > #l1230){
+    height: 4rem;
+}
+thead th {
+    text-transform: uppercase;
     text-align: center;
 }
-th {
-    background-color: #cfcfcf;
-    height: 5em;
-}
-.vide {
-    background-color: transparent;
+
+td[headers~=l1230] {
+    vertical-align: middle;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
     border: none;
+    background: none;
 }
+
+dl > dd {
+    margin-bottom: .5em;
+}
+
+dd {
+    margin: 0;
+    padding-left: 1rem;
+    text-align: left;
+}
+
+dd:first-of-type:before {
+    content: "📚";
+    padding-right: 0.5rem;
+
+}
+
+dd:first-of-type {
+    font-weight: bold;
+}
+
+dd:nth-of-type(2):before {
+    content: "🧑‍🏫";
+    padding-right: 0.5rem;
+}
+
+dd:last-of-type:before {
+    content: "📍";
+    padding-right: 0.5rem;
+}
+
+
 caption {
     font-style: italic;
     text-align: right;
