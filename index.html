@@ -1,14 +1,286 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8" />
-        <title>
-
-        </title>
-        <link rel="stylesheet" href="" />
-    </head>
-    <body>
-        <h1></h1>
-
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="tecg-cpw" />
+    <meta
+      name="keywords"
+      content="html, table, planning, horaire, infographie"
+    />
+    <meta
+      name="description"
+      content="Le planning scolaire de l’étudiant de B1 en techniques graphiques"
+    />
+    <title>Planning scolaire en B1 infographie</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <h1>Le planning scolaire de l’étudiant du premier bloc</h1>
+    <div id="table-description">
+      <p>
+        Les cours ont lieu tous les jours du lundi au vendredi. La journée type
+        est découpée en huit plages horaires de deux heures. La matinée démarre
+        à 8h30 et se termine à 12h30. Suit la pause repas de 12h30 à 13h30.
+        L’après-midi recommence à 13h30 et se termine à 17h30. Un étudiant de
+        bloc 1 a, durant le premier quadrimestre, des cours de toutes les
+        orientations répartis sur une ou deux plages. Pour le quadrimestre en
+        question dans ce document, il n’a pas de cours le vendredi.
+      </p>
+    </div>
+    <table aria-describedby="table-description">
+      <caption>
+        Mon horaire de cours de ce quadrimestre
+      </caption>
+      <thead>
+        <tr>
+          <td aria-hidden="true"></td>
+          <th id="monday">Lundi</th>
+          <th id="tuesday">Mardi</th>
+          <th id="wednesday">Mercredi</th>
+          <th id="thursday">Jeudi</th>
+          <th id="friday">Vendredi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th id="l0830">
+            <time datetime="08:30:00">8h30</time>
+            -
+            <time datetime="09:30:00">9h30</time>
+          </th>
+          <td colspan="3" rowspan="2" aria-hidden="true"></td>
+          <!--
+          <td></td>
+          <td></td>
+          -->
+          <td headers="thursday l0830 l0930 l1030 l1130" rowspan="4">
+            <dl>
+              <dt>Cours</dt>
+              <dd>Graphisme - <abbr title="Travaux pratiques">TP</abbr></dd>
+              <dt>Professeur</dt>
+              <dd><abbr title="Monsieur">Mr.</abbr> Bejjaji</dd>
+              <dt>Local</dt>
+              <dd>XL3</dd>
+            </dl>
+          </td>
+          <td aria-hidden="true" rowspan="4"></td>
+        </tr>
+        <tr>
+          <th id="l0930">
+            <time datetime="09:30:00">9h30</time>
+            -
+            <time datetime="10:30:00">10h30</time>
+          </th>
+          <!--
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          -->
+        </tr>
+        <tr>
+          <th id="l1030">
+            <time datetime="10:30:00">10h30</time>
+            -
+            <time datetime="11:30:00">11h30</time>
+          </th>
+          <td headers="monday l1030 l1130" rowspan="2">
+            <dl>
+              <dt>Cours</dt>
+              <dd>Technologies Vidéo</dd>
+              <dt>Professeur</dt>
+              <dd><abbr title="Monsieur">Mr.</abbr> Borremans</dd>
+              <dt>Local</dt>
+              <dd><abbr title="Auditorium Thomas Edison">AE</abbr></dd>
+            </dl>
+          </td>
+          <td headers="tuesday l1030 l1130" rowspan="2">
+            <dl>
+              <dt>Cours</dt>
+              <dd>
+                Créations infographiques 2D -
+                <abbr title="Travaux pratiques">TP</abbr>
+              </dd>
+              <dt>Professeur</dt>
+              <dd><abbr title="Monsieur">Mr.</abbr> Xhenseval</dd>
+              <dt>Local</dt>
+              <dd>L23</dd>
+            </dl>
+          </td>
+          <td headers="l1030 l1130 wednesday" rowspan="2">
+            <dl>
+              <dt>Cours</dt>
+              <dd>Créations de pages Web</dd>
+              <dt>Professeur</dt>
+              <dd><abbr title="Madame">Mme.</abbr> Dupont</dd>
+              <dt>Local</dt>
+              <dd><abbr title="Auditorium Thomas Edison">AE</abbr></dd>
+            </dl>
+          </td>
+          <!--
+          <td></td>
+          <td></td>
+          -->
+        </tr>
+        <tr>
+          <th id="l1130">
+            <time datetime="11:30:00">11h30</time>
+            -
+            <time datetime="12:30:00">12h30</time>
+          </th>
+          <!--
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          -->
+        </tr>
+        <tr>
+          <th id="l1230">
+            <time datetime="12:30:00">12h30</time>
+            -
+            <time datetime="13:30:00">13h30</time>
+          </th>
+          <td
+            headers="l1230 monday tuesday wednesday thursday friday"
+            colspan="5"
+          >
+            🥙 Pause repas 🥗
+          </td>
+          <!--<td headers=""></td>
+          <td headers=""></td>
+          <td headers=""></td>
+          <td headers=""></td>-->
+        </tr>
+        <tr>
+          <th id="l1330">
+            <time datetime="13:30:00">13h30</time>
+            -
+            <time datetime="14:30:00">14h30</time>
+          </th>
+          <td headers="l1330 l1430 monday" rowspan="2">
+            <dl>
+              <dt>Cours</dt>
+              <dd>Introduction à l'image numérique</dd>
+              <dt>Professeur</dt>
+              <dd><abbr title="Monsieur">Mr.</abbr> Parmentier</dd>
+              <dt>Local</dt>
+              <dd><abbr title="Pavillon 2">PV2</abbr></dd>
+            </dl>
+          </td>
+          <td headers="l1330 l1430 tuesday" rowspan="2">
+            <dl>
+              <dt>Cours</dt>
+              <dd>
+                Création de pages web -
+                <abbr title="Travaux pratiques">TP</abbr>
+              </dd>
+              <dt>Professeur</dt>
+              <dd><abbr title="Madame">Mme.</abbr> Dupont</dd>
+              <dt>Local</dt>
+              <dd>L22</dd>
+            </dl>
+          </td>
+          <td headers="l1330 l1430 wednesday" rowspan="2">
+            <dl>
+              <dt>Cours</dt>
+              <dd>Création Infographique 3D</dd>
+              <dt>Professeur</dt>
+              <dd><abbr title="Monsieur">Mr.</abbr> Claisse</dd>
+              <dt>Local</dt>
+              <dd>L25</dd>
+            </dl>
+          </td>
+          <td headers="l1330 l1430 thursday" rowspan="2">
+            <dl>
+              <dt>Cours</dt>
+              <dd>Culture artistique</dd>
+              <dt>Professeur</dt>
+              <dd><abbr title="Monsieur">Mr.</abbr> Spirlet</dd>
+              <dt>Local</dt>
+              <dd><abbr title="Auditorium Thomas Edison">AE</abbr></dd>
+            </dl>
+          </td>
+          <td rowspan="4" aria-hidden="true"></td>
+        </tr>
+        <tr>
+          <th id="l1430">
+            <time datetime="14:30:00">14h30</time>
+            -
+            <time datetime="15:30:00">15h30</time>
+          </th>
+          <!--
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          -->
+        </tr>
+        <tr>
+          <th id="l1530">
+            <time datetime="15:30:00">15h30</time>
+            -
+            <time datetime="16:30:00">16h30</time>
+          </th>
+          <td rowspan="2" aria-hidden="true"></td>
+          <td headers="l1530 tuesday">
+            <dl>
+              <dt>Cours</dt>
+              <dd>Anglais - <abbr title="Travaux pratiques">TP</abbr></dd>
+              <dt>Professeur</dt>
+              <dd><abbr title="Madame">Mme.</abbr> Randaxhe</dd>
+              <dt>Local</dt>
+              <dd><abbr title="Pavillon 3">PV3</abbr></dd>
+            </dl>
+          </td>
+          <td headers="l1530 l1630 wednesday" rowspan="2">
+            <dl>
+              <dt>Cours</dt>
+              <dd>
+                Création Infographique 3D -
+                <abbr title="Travaux pratiques">TP</abbr>
+              </dd>
+              <dt>Professeur</dt>
+              <dd><abbr title="Monsieur">Mr.</abbr> Scheer</dd>
+              <dt>Local</dt>
+              <dd>L24</dd>
+            </dl>
+          </td>
+          <td headers="l1530 l1630 thursday" rowspan="2">
+            <dl>
+              <dt>Cours</dt>
+              <dd>
+                Réalisation vidéo - <abbr title="Travaux pratiques">TP</abbr>
+              </dd>
+              <dt>Professeur</dt>
+              <dd><abbr title="Madame">Mme.</abbr> Bounaffa</dd>
+              <dt>Local</dt>
+              <dd>L23</dd>
+            </dl>
+          </td>
+          <!--
+          <td></td>
+          -->
+        </tr>
+        <tr>
+          <th id="l1630">
+            <time datetime="16:30:00">16h30</time>
+            -
+            <time datetime="17:30:00">17h30</time>
+          </th>
+          <!--
+          <td></td>
+          -->
+          <td aria-hidden="true"></td>
+          <!--
+          <td></td>
+          <td></td>
+          -->
+        </tr>
+      </tbody>
+    </table>
+  </body>
 </html>
